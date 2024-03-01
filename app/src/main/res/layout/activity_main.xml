@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffb97d"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit_PW"
+        android:layout_width="270dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="비밀번호"
+        android:textSize="16sp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edit_id"
+        app:layout_constraintStart_toStartOf="@+id/edit_id"
+        app:layout_constraintTop_toBottomOf="@+id/edit_id" />
+
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="270dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:hint="계정(이메일 또는 전화번호)"
+        android:textSize="16sp"
+        android:ems="10"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_img" />
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/btn_login"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="로그인"
+        android:background="@drawable/test_background"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_PW"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_PW"
+        app:layout_constraintTop_toBottomOf="@+id/edit_PW" />
+
+    <TextView
+        android:id="@+id/or_line"
+        android:layout_width="35dp"
+        android:layout_height="38dp"
+        android:text="또는"
+        android:textSize = "13sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <CheckBox
+        android:id="@+id/cb_auto_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="자동로그인"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/btn_qr"
+        app:layout_constraintTop_toBottomOf="@+id/btn_qr" />
+
+    <android.widget.Button
+        android:id="@+id/btn_qr"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/qr_btn"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:text="QR코드 로그인"
+        android:background="@drawable/qr_btn_background"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/or_line"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/or_line"
+        app:layout_constraintTop_toBottomOf="@+id/or_line" />
+
+    <View
+        android:id="@+id/left_line"
+        android:layout_width="110dp"
+        android:layout_height="1dp"
+        android:background="#E59551"
+        app:layout_constraintBottom_toBottomOf="@+id/or_line"
+        app:layout_constraintEnd_toStartOf="@+id/or_line"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <View
+        android:id="@+id/right_line"
+        android:layout_width="110dp"
+        android:layout_height="1dp"
+        android:background="#E59551"
+        app:layout_constraintBottom_toBottomOf="@+id/or_line"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toEndOf="@+id/or_line"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <ImageButton
+        android:id="@+id/view_more_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/down_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_id"
+        app:layout_constraintEnd_toEndOf="@+id/edit_id"
+        app:layout_constraintTop_toTopOf="@+id/edit_id"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <ImageButton
+        android:id="@+id/inf_tool_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:background="@drawable/information_background"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_auto_login"
+        app:layout_constraintStart_toEndOf="@+id/cb_auto_login"
+        app:layout_constraintTop_toTopOf="@+id/cb_auto_login" />
+
+    <TextView
+        android:id="@+id/save_id"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_background"
+        android:text="test1234@email.com"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/edit_id"
+        app:layout_constraintStart_toStartOf="@+id/edit_id"
+        app:layout_constraintTop_toBottomOf="@+id/edit_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
